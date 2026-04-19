@@ -39,12 +39,17 @@ function syncCloudflare() {
 
     try {
       console.log(`  - Pushing ${name} to Worker...`);
-      // Strictly using Workers secret command (double diamonds)
+      // We use wrangler secret put.
+      // Note: If you get error 10053, manually delete the PLAIN TEXT variable 'SITE_URL'
+      // in the Cloudflare Dashboard first, as it conflicts with secrets.
       execSync(`echo "${value}" | npx --yes wrangler secret put ${name} --name ${workerName}`, {
         stdio: "inherit",
       });
     } catch (error) {
       console.error(`\n❌ CRITICAL FAILURE: Failed to sync ${name} to Cloudflare Worker.`);
+      console.error(
+        "Check if this variable already exists as a PLAIN TEXT variable in the dashboard.",
+      );
       console.error(error.message);
       process.exit(1);
     }
