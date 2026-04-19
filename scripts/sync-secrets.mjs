@@ -38,18 +38,15 @@ function syncCloudflare() {
     }
 
     try {
-      console.log(`  - Pushing ${name}...`);
-      // We use npx --yes to prevent installation prompts in CI
-      execSync(
-        `echo "${value}" | npx --yes wrangler pages secret put ${name} --project-name ${workerName}`,
-        {
-          stdio: "inherit",
-        },
-      );
+      console.log(`  - Pushing ${name} to Worker...`);
+      // Strictly using Workers secret command (double diamonds)
+      execSync(`echo "${value}" | npx --yes wrangler secret put ${name} --name ${workerName}`, {
+        stdio: "inherit",
+      });
     } catch (error) {
-      console.error(`\n❌ CRITICAL FAILURE: Failed to sync ${name} to Cloudflare.`);
+      console.error(`\n❌ CRITICAL FAILURE: Failed to sync ${name} to Cloudflare Worker.`);
       console.error(error.message);
-      process.exit(1); // Stop the CI immediately if secrets fail
+      process.exit(1);
     }
   }
 }
