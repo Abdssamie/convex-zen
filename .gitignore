@@ -61,3 +61,4 @@ temp
 
 convex-brevo
 _generated/
+.env.secrets

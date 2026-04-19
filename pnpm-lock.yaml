@@ -90,6 +90,9 @@ importers:
       typescript:
         specifier: ^5
         version: 5.9.3
+      wrangler:
+        specifier: ^4.83.0
+        version: 4.83.0(@cloudflare/workers-types@4.20260413.1)
 
   apps/web:
     dependencies:
@@ -11315,6 +11318,23 @@ snapshots:
       '@cloudflare/workerd-linux-64': 1.20260415.1
       '@cloudflare/workerd-linux-arm64': 1.20260415.1
       '@cloudflare/workerd-windows-64': 1.20260415.1
+
+  wrangler@4.83.0(@cloudflare/workers-types@4.20260413.1):
+    dependencies:
+      '@cloudflare/kv-asset-handler': 0.4.2
+      '@cloudflare/unenv-preset': 2.16.0(unenv@2.0.0-rc.24)(workerd@1.20260415.1)
+      blake3-wasm: 2.1.5
+      esbuild: 0.27.3
+      miniflare: 4.20260415.0
+      path-to-regexp: 6.3.0
+      unenv: 2.0.0-rc.24
+      workerd: 1.20260415.1
+    optionalDependencies:
+      '@cloudflare/workers-types': 4.20260413.1
+      fsevents: 2.3.3
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
 
   wrangler@4.83.0(@cloudflare/workers-types@4.20260418.1):
     dependencies:
