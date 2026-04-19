@@ -28,6 +28,12 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Generate Convex types
+        run: npx convex codegen
+        working-directory: packages/backend
+        env:
+          CONVEX_DEPLOY_KEY: ${{ secrets.CONVEX_DEPLOY_KEY }}
+
       - name: Run lint
         run: pnpm lint
 
@@ -35,7 +41,7 @@ jobs:
         run: pnpm typecheck
 
       - name: Run backend tests
-        run: pnpm --filter @convex-zen/backend run test
+        run: pnpm --filter @convex-directory/backend run test
 
       # - name: Install Playwright Browsers
       #   run: pnpm exec playwright install --with-deps

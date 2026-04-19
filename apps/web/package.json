@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "deploy": "node ../../scripts/sync-project-config.mjs && vite build && wrangler deploy --config dist/server/wrangler.json --keep-vars",
+    "deploy": "vite build && wrangler deploy --config dist/server/wrangler.json --keep-vars",
     "destroy": "node ../../scripts/destroy-web.mjs",
     "serve": "vite preview",
     "dev:bare": "vite dev",

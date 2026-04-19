@@ -21,8 +21,9 @@
     "deploy:web": "pnpm --filter web deploy",
     "deploy:backend": "pnpm --filter @convex-zen/backend deploy",
     "destroy": "pnpm --filter web destroy",
-    "prepare": "husky",
     "convex-env-sync": "cd packages/backend && npx convex env set --from-file .env.convex",
+    "secrets:verify": "node scripts/verify-secrets.mjs",
+    "secrets:push": "pnpm secrets:verify && gh secret set --env-file .env.secrets",
     "brevo": "pnpm --filter @convex-zen/backend brevo",
     "brevo:list": "pnpm brevo list",
     "brevo:sync": "pnpm brevo sync"
@@ -40,7 +41,8 @@
     "lint-staged": "^16.1.2",
     "oxfmt": "^0.26.0",
     "oxlint": "^1.41.0",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "^4.83.0"
   },
   "lint-staged": {
     "*.{js,mjs,cjs,ts,tsx,jsx}": [

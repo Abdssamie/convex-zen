@@ -16,8 +16,34 @@ jobs:
       VITE_CONVEX_URL: ${{ secrets.VITE_CONVEX_URL }}
       VITE_CONVEX_SITE_URL: ${{ secrets.VITE_CONVEX_SITE_URL }}
       SITE_URL: ${{ secrets.SITE_URL }}
+      AUTH_TRUSTED_ORIGINS: ${{ secrets.AUTH_TRUSTED_ORIGINS }}
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      
+      # Auth
+      BETTER_AUTH_SECRET: ${{ secrets.BETTER_AUTH_SECRET }}
+      ADMIN_EMAIL: ${{ secrets.ADMIN_EMAIL }}
+      
+      # Brevo
+      BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+      BREVO_WEBHOOK_TOKEN: ${{ secrets.BREVO_WEBHOOK_TOKEN }}
+      BREVO_APP_NAME: ${{ secrets.BREVO_APP_NAME }}
+      BREVO_SENDER_EMAIL: ${{ secrets.BREVO_SENDER_EMAIL }}
+      BREVO_SENDER_NAME: ${{ secrets.BREVO_SENDER_NAME }}
+      BREVO_REPLY_TO_EMAIL: ${{ secrets.BREVO_REPLY_TO_EMAIL }}
+      BREVO_REPLY_TO_NAME: ${{ secrets.BREVO_REPLY_TO_NAME }}
+      
+      # R2
+      R2_TOKEN: ${{ secrets.R2_TOKEN }}
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+      
+      # Polar
+      POLAR_ORGANIZATION_TOKEN: ${{ secrets.POLAR_ORGANIZATION_TOKEN }}
+      POLAR_WEBHOOK_SECRET: ${{ secrets.POLAR_WEBHOOK_SECRET }}
+      POLAR_SERVER: ${{ secrets.POLAR_SERVER }}
 
     steps:
       - name: Checkout
@@ -39,6 +65,9 @@ jobs:
 
       - name: Sync project config
         run: pnpm run sync:project-config
+
+      - name: Sync secrets
+        run: node scripts/sync-secrets.mjs
 
       - name: Validate deploy config
         run: pnpm run doctor:deploy
