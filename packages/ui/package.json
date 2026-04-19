@@ -57,6 +57,7 @@
   },
   "devDependencies": {
     "@convex-zen/config": "workspace:*",
+    "@tailwindcss/cli": "^4.2.2",
     "@types/node": "^24.12.2",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
