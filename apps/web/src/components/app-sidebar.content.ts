@@ -8,6 +8,7 @@ const appSidebarDictionary = {
         label: t({ en: "Dashboards", fr: "Tableaux de bord" }),
         items: [
           { title: t({ en: "Dashboard", fr: "Tableau de bord" }), url: "/dashboard" },
+          { title: t({ en: "Analytics", fr: "Analytique" }), url: "/admin/analytics" },
           { title: t({ en: "Home", fr: "Accueil" }), url: "/" },
         ],
       },

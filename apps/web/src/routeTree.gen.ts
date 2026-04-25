@@ -8,433 +8,437 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from './routes/__root'
-import { Route as Char123LocaleChar125RouteRouteImport } from './routes/{-$locale}/route'
-import { Route as Char123LocaleChar125IndexRouteImport } from './routes/{-$locale}/index'
-import { Route as Char123LocaleChar125VerifyEmailRouteImport } from './routes/{-$locale}/verify-email'
-import { Route as Char123LocaleChar125SignUpRouteImport } from './routes/{-$locale}/sign-up'
-import { Route as Char123LocaleChar125SignInRouteImport } from './routes/{-$locale}/sign-in'
-import { Route as Char123LocaleChar125ResetPasswordRouteImport } from './routes/{-$locale}/reset-password'
-import { Route as Char123LocaleChar125MagicLinkRouteImport } from './routes/{-$locale}/magic-link'
-import { Route as Char123LocaleChar125ForgotPasswordRouteImport } from './routes/{-$locale}/forgot-password'
-import { Route as Char123LocaleChar125DashboardRouteImport } from './routes/{-$locale}/dashboard'
-import { Route as Char123LocaleChar125404RouteImport } from './routes/{-$locale}/404'
-import { Route as Char123LocaleChar125SplatRouteImport } from './routes/{-$locale}/$'
-import { Route as Char123LocaleChar125SettingsOrganizationRouteImport } from './routes/{-$locale}/settings/organization'
-import { Route as Char123LocaleChar125SettingsBillingRouteImport } from './routes/{-$locale}/settings/billing'
-import { Route as Char123LocaleChar125SettingsAccountRouteImport } from './routes/{-$locale}/settings/account'
-import { Route as Char123LocaleChar125OnboardingOrganizationRouteImport } from './routes/{-$locale}/onboarding/organization'
-import { Route as Char123LocaleChar125InviteInvitationIdRouteImport } from './routes/{-$locale}/invite/$invitationId'
-import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
+import { Route as rootRouteImport } from "./routes/__root";
+import { Route as Char123LocaleChar125RouteRouteImport } from "./routes/{-$locale}/route";
+import { Route as Char123LocaleChar125IndexRouteImport } from "./routes/{-$locale}/index";
+import { Route as Char123LocaleChar125VerifyEmailRouteImport } from "./routes/{-$locale}/verify-email";
+import { Route as Char123LocaleChar125SignUpRouteImport } from "./routes/{-$locale}/sign-up";
+import { Route as Char123LocaleChar125SignInRouteImport } from "./routes/{-$locale}/sign-in";
+import { Route as Char123LocaleChar125ResetPasswordRouteImport } from "./routes/{-$locale}/reset-password";
+import { Route as Char123LocaleChar125MagicLinkRouteImport } from "./routes/{-$locale}/magic-link";
+import { Route as Char123LocaleChar125ForgotPasswordRouteImport } from "./routes/{-$locale}/forgot-password";
+import { Route as Char123LocaleChar125DashboardRouteImport } from "./routes/{-$locale}/dashboard";
+import { Route as Char123LocaleChar125404RouteImport } from "./routes/{-$locale}/404";
+import { Route as Char123LocaleChar125SplatRouteImport } from "./routes/{-$locale}/$";
+import { Route as Char123LocaleChar125SettingsOrganizationRouteImport } from "./routes/{-$locale}/settings/organization";
+import { Route as Char123LocaleChar125SettingsBillingRouteImport } from "./routes/{-$locale}/settings/billing";
+import { Route as Char123LocaleChar125SettingsAccountRouteImport } from "./routes/{-$locale}/settings/account";
+import { Route as Char123LocaleChar125OnboardingOrganizationRouteImport } from "./routes/{-$locale}/onboarding/organization";
+import { Route as Char123LocaleChar125InviteInvitationIdRouteImport } from "./routes/{-$locale}/invite/$invitationId";
+import { Route as Char123LocaleChar125AdminAnalyticsRouteImport } from "./routes/{-$locale}/admin/analytics";
+import { Route as ApiAuthSplatRouteImport } from "./routes/api/auth/$";
 
-const Char123LocaleChar125RouteRoute =
-  Char123LocaleChar125RouteRouteImport.update({
-    id: '/{-$locale}',
-    path: '/{-$locale}',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const Char123LocaleChar125IndexRoute =
-  Char123LocaleChar125IndexRouteImport.update({
-    id: '/',
-    path: '/',
-    getParentRoute: () => Char123LocaleChar125RouteRoute,
-  } as any)
-const Char123LocaleChar125VerifyEmailRoute =
-  Char123LocaleChar125VerifyEmailRouteImport.update({
-    id: '/verify-email',
-    path: '/verify-email',
-    getParentRoute: () => Char123LocaleChar125RouteRoute,
-  } as any)
-const Char123LocaleChar125SignUpRoute =
-  Char123LocaleChar125SignUpRouteImport.update({
-    id: '/sign-up',
-    path: '/sign-up',
-    getParentRoute: () => Char123LocaleChar125RouteRoute,
-  } as any)
-const Char123LocaleChar125SignInRoute =
-  Char123LocaleChar125SignInRouteImport.update({
-    id: '/sign-in',
-    path: '/sign-in',
-    getParentRoute: () => Char123LocaleChar125RouteRoute,
-  } as any)
-const Char123LocaleChar125ResetPasswordRoute =
-  Char123LocaleChar125ResetPasswordRouteImport.update({
-    id: '/reset-password',
-    path: '/reset-password',
-    getParentRoute: () => Char123LocaleChar125RouteRoute,
-  } as any)
-const Char123LocaleChar125MagicLinkRoute =
-  Char123LocaleChar125MagicLinkRouteImport.update({
-    id: '/magic-link',
-    path: '/magic-link',
-    getParentRoute: () => Char123LocaleChar125RouteRoute,
-  } as any)
+const Char123LocaleChar125RouteRoute = Char123LocaleChar125RouteRouteImport.update({
+  id: "/{-$locale}",
+  path: "/{-$locale}",
+  getParentRoute: () => rootRouteImport,
+} as any);
+const Char123LocaleChar125IndexRoute = Char123LocaleChar125IndexRouteImport.update({
+  id: "/",
+  path: "/",
+  getParentRoute: () => Char123LocaleChar125RouteRoute,
+} as any);
+const Char123LocaleChar125VerifyEmailRoute = Char123LocaleChar125VerifyEmailRouteImport.update({
+  id: "/verify-email",
+  path: "/verify-email",
+  getParentRoute: () => Char123LocaleChar125RouteRoute,
+} as any);
+const Char123LocaleChar125SignUpRoute = Char123LocaleChar125SignUpRouteImport.update({
+  id: "/sign-up",
+  path: "/sign-up",
+  getParentRoute: () => Char123LocaleChar125RouteRoute,
+} as any);
+const Char123LocaleChar125SignInRoute = Char123LocaleChar125SignInRouteImport.update({
+  id: "/sign-in",
+  path: "/sign-in",
+  getParentRoute: () => Char123LocaleChar125RouteRoute,
+} as any);
+const Char123LocaleChar125ResetPasswordRoute = Char123LocaleChar125ResetPasswordRouteImport.update({
+  id: "/reset-password",
+  path: "/reset-password",
+  getParentRoute: () => Char123LocaleChar125RouteRoute,
+} as any);
+const Char123LocaleChar125MagicLinkRoute = Char123LocaleChar125MagicLinkRouteImport.update({
+  id: "/magic-link",
+  path: "/magic-link",
+  getParentRoute: () => Char123LocaleChar125RouteRoute,
+} as any);
 const Char123LocaleChar125ForgotPasswordRoute =
   Char123LocaleChar125ForgotPasswordRouteImport.update({
-    id: '/forgot-password',
-    path: '/forgot-password',
+    id: "/forgot-password",
+    path: "/forgot-password",
     getParentRoute: () => Char123LocaleChar125RouteRoute,
-  } as any)
-const Char123LocaleChar125DashboardRoute =
-  Char123LocaleChar125DashboardRouteImport.update({
-    id: '/dashboard',
-    path: '/dashboard',
-    getParentRoute: () => Char123LocaleChar125RouteRoute,
-  } as any)
-const Char123LocaleChar125404Route = Char123LocaleChar125404RouteImport.update({
-  id: '/404',
-  path: '/404',
+  } as any);
+const Char123LocaleChar125DashboardRoute = Char123LocaleChar125DashboardRouteImport.update({
+  id: "/dashboard",
+  path: "/dashboard",
   getParentRoute: () => Char123LocaleChar125RouteRoute,
-} as any)
-const Char123LocaleChar125SplatRoute =
-  Char123LocaleChar125SplatRouteImport.update({
-    id: '/$',
-    path: '/$',
-    getParentRoute: () => Char123LocaleChar125RouteRoute,
-  } as any)
+} as any);
+const Char123LocaleChar125404Route = Char123LocaleChar125404RouteImport.update({
+  id: "/404",
+  path: "/404",
+  getParentRoute: () => Char123LocaleChar125RouteRoute,
+} as any);
+const Char123LocaleChar125SplatRoute = Char123LocaleChar125SplatRouteImport.update({
+  id: "/$",
+  path: "/$",
+  getParentRoute: () => Char123LocaleChar125RouteRoute,
+} as any);
 const Char123LocaleChar125SettingsOrganizationRoute =
   Char123LocaleChar125SettingsOrganizationRouteImport.update({
-    id: '/settings/organization',
-    path: '/settings/organization',
+    id: "/settings/organization",
+    path: "/settings/organization",
     getParentRoute: () => Char123LocaleChar125RouteRoute,
-  } as any)
+  } as any);
 const Char123LocaleChar125SettingsBillingRoute =
   Char123LocaleChar125SettingsBillingRouteImport.update({
-    id: '/settings/billing',
-    path: '/settings/billing',
+    id: "/settings/billing",
+    path: "/settings/billing",
     getParentRoute: () => Char123LocaleChar125RouteRoute,
-  } as any)
+  } as any);
 const Char123LocaleChar125SettingsAccountRoute =
   Char123LocaleChar125SettingsAccountRouteImport.update({
-    id: '/settings/account',
-    path: '/settings/account',
+    id: "/settings/account",
+    path: "/settings/account",
     getParentRoute: () => Char123LocaleChar125RouteRoute,
-  } as any)
+  } as any);
 const Char123LocaleChar125OnboardingOrganizationRoute =
   Char123LocaleChar125OnboardingOrganizationRouteImport.update({
-    id: '/onboarding/organization',
-    path: '/onboarding/organization',
+    id: "/onboarding/organization",
+    path: "/onboarding/organization",
     getParentRoute: () => Char123LocaleChar125RouteRoute,
-  } as any)
+  } as any);
 const Char123LocaleChar125InviteInvitationIdRoute =
   Char123LocaleChar125InviteInvitationIdRouteImport.update({
-    id: '/invite/$invitationId',
-    path: '/invite/$invitationId',
+    id: "/invite/$invitationId",
+    path: "/invite/$invitationId",
     getParentRoute: () => Char123LocaleChar125RouteRoute,
-  } as any)
+  } as any);
+const Char123LocaleChar125AdminAnalyticsRoute =
+  Char123LocaleChar125AdminAnalyticsRouteImport.update({
+    id: "/admin/analytics",
+    path: "/admin/analytics",
+    getParentRoute: () => Char123LocaleChar125RouteRoute,
+  } as any);
 const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
-  id: '/api/auth/$',
-  path: '/api/auth/$',
+  id: "/api/auth/$",
+  path: "/api/auth/$",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 
 export interface FileRoutesByFullPath {
-  '/{-$locale}': typeof Char123LocaleChar125RouteRouteWithChildren
-  '/{-$locale}/$': typeof Char123LocaleChar125SplatRoute
-  '/{-$locale}/404': typeof Char123LocaleChar125404Route
-  '/{-$locale}/dashboard': typeof Char123LocaleChar125DashboardRoute
-  '/{-$locale}/forgot-password': typeof Char123LocaleChar125ForgotPasswordRoute
-  '/{-$locale}/magic-link': typeof Char123LocaleChar125MagicLinkRoute
-  '/{-$locale}/reset-password': typeof Char123LocaleChar125ResetPasswordRoute
-  '/{-$locale}/sign-in': typeof Char123LocaleChar125SignInRoute
-  '/{-$locale}/sign-up': typeof Char123LocaleChar125SignUpRoute
-  '/{-$locale}/verify-email': typeof Char123LocaleChar125VerifyEmailRoute
-  '/{-$locale}/': typeof Char123LocaleChar125IndexRoute
-  '/api/auth/$': typeof ApiAuthSplatRoute
-  '/{-$locale}/invite/$invitationId': typeof Char123LocaleChar125InviteInvitationIdRoute
-  '/{-$locale}/onboarding/organization': typeof Char123LocaleChar125OnboardingOrganizationRoute
-  '/{-$locale}/settings/account': typeof Char123LocaleChar125SettingsAccountRoute
-  '/{-$locale}/settings/billing': typeof Char123LocaleChar125SettingsBillingRoute
-  '/{-$locale}/settings/organization': typeof Char123LocaleChar125SettingsOrganizationRoute
+  "/{-$locale}": typeof Char123LocaleChar125RouteRouteWithChildren;
+  "/{-$locale}/$": typeof Char123LocaleChar125SplatRoute;
+  "/{-$locale}/404": typeof Char123LocaleChar125404Route;
+  "/{-$locale}/dashboard": typeof Char123LocaleChar125DashboardRoute;
+  "/{-$locale}/forgot-password": typeof Char123LocaleChar125ForgotPasswordRoute;
+  "/{-$locale}/magic-link": typeof Char123LocaleChar125MagicLinkRoute;
+  "/{-$locale}/reset-password": typeof Char123LocaleChar125ResetPasswordRoute;
+  "/{-$locale}/sign-in": typeof Char123LocaleChar125SignInRoute;
+  "/{-$locale}/sign-up": typeof Char123LocaleChar125SignUpRoute;
+  "/{-$locale}/verify-email": typeof Char123LocaleChar125VerifyEmailRoute;
+  "/{-$locale}/": typeof Char123LocaleChar125IndexRoute;
+  "/api/auth/$": typeof ApiAuthSplatRoute;
+  "/{-$locale}/admin/analytics": typeof Char123LocaleChar125AdminAnalyticsRoute;
+  "/{-$locale}/invite/$invitationId": typeof Char123LocaleChar125InviteInvitationIdRoute;
+  "/{-$locale}/onboarding/organization": typeof Char123LocaleChar125OnboardingOrganizationRoute;
+  "/{-$locale}/settings/account": typeof Char123LocaleChar125SettingsAccountRoute;
+  "/{-$locale}/settings/billing": typeof Char123LocaleChar125SettingsBillingRoute;
+  "/{-$locale}/settings/organization": typeof Char123LocaleChar125SettingsOrganizationRoute;
 }
 export interface FileRoutesByTo {
-  '/{-$locale}/$': typeof Char123LocaleChar125SplatRoute
-  '/{-$locale}/404': typeof Char123LocaleChar125404Route
-  '/{-$locale}/dashboard': typeof Char123LocaleChar125DashboardRoute
-  '/{-$locale}/forgot-password': typeof Char123LocaleChar125ForgotPasswordRoute
-  '/{-$locale}/magic-link': typeof Char123LocaleChar125MagicLinkRoute
-  '/{-$locale}/reset-password': typeof Char123LocaleChar125ResetPasswordRoute
-  '/{-$locale}/sign-in': typeof Char123LocaleChar125SignInRoute
-  '/{-$locale}/sign-up': typeof Char123LocaleChar125SignUpRoute
-  '/{-$locale}/verify-email': typeof Char123LocaleChar125VerifyEmailRoute
-  '/{-$locale}': typeof Char123LocaleChar125IndexRoute
-  '/api/auth/$': typeof ApiAuthSplatRoute
-  '/{-$locale}/invite/$invitationId': typeof Char123LocaleChar125InviteInvitationIdRoute
-  '/{-$locale}/onboarding/organization': typeof Char123LocaleChar125OnboardingOrganizationRoute
-  '/{-$locale}/settings/account': typeof Char123LocaleChar125SettingsAccountRoute
-  '/{-$locale}/settings/billing': typeof Char123LocaleChar125SettingsBillingRoute
-  '/{-$locale}/settings/organization': typeof Char123LocaleChar125SettingsOrganizationRoute
+  "/{-$locale}/$": typeof Char123LocaleChar125SplatRoute;
+  "/{-$locale}/404": typeof Char123LocaleChar125404Route;
+  "/{-$locale}/dashboard": typeof Char123LocaleChar125DashboardRoute;
+  "/{-$locale}/forgot-password": typeof Char123LocaleChar125ForgotPasswordRoute;
+  "/{-$locale}/magic-link": typeof Char123LocaleChar125MagicLinkRoute;
+  "/{-$locale}/reset-password": typeof Char123LocaleChar125ResetPasswordRoute;
+  "/{-$locale}/sign-in": typeof Char123LocaleChar125SignInRoute;
+  "/{-$locale}/sign-up": typeof Char123LocaleChar125SignUpRoute;
+  "/{-$locale}/verify-email": typeof Char123LocaleChar125VerifyEmailRoute;
+  "/{-$locale}": typeof Char123LocaleChar125IndexRoute;
+  "/api/auth/$": typeof ApiAuthSplatRoute;
+  "/{-$locale}/admin/analytics": typeof Char123LocaleChar125AdminAnalyticsRoute;
+  "/{-$locale}/invite/$invitationId": typeof Char123LocaleChar125InviteInvitationIdRoute;
+  "/{-$locale}/onboarding/organization": typeof Char123LocaleChar125OnboardingOrganizationRoute;
+  "/{-$locale}/settings/account": typeof Char123LocaleChar125SettingsAccountRoute;
+  "/{-$locale}/settings/billing": typeof Char123LocaleChar125SettingsBillingRoute;
+  "/{-$locale}/settings/organization": typeof Char123LocaleChar125SettingsOrganizationRoute;
 }
 export interface FileRoutesById {
-  __root__: typeof rootRouteImport
-  '/{-$locale}': typeof Char123LocaleChar125RouteRouteWithChildren
-  '/{-$locale}/$': typeof Char123LocaleChar125SplatRoute
-  '/{-$locale}/404': typeof Char123LocaleChar125404Route
-  '/{-$locale}/dashboard': typeof Char123LocaleChar125DashboardRoute
-  '/{-$locale}/forgot-password': typeof Char123LocaleChar125ForgotPasswordRoute
-  '/{-$locale}/magic-link': typeof Char123LocaleChar125MagicLinkRoute
-  '/{-$locale}/reset-password': typeof Char123LocaleChar125ResetPasswordRoute
-  '/{-$locale}/sign-in': typeof Char123LocaleChar125SignInRoute
-  '/{-$locale}/sign-up': typeof Char123LocaleChar125SignUpRoute
-  '/{-$locale}/verify-email': typeof Char123LocaleChar125VerifyEmailRoute
-  '/{-$locale}/': typeof Char123LocaleChar125IndexRoute
-  '/api/auth/$': typeof ApiAuthSplatRoute
-  '/{-$locale}/invite/$invitationId': typeof Char123LocaleChar125InviteInvitationIdRoute
-  '/{-$locale}/onboarding/organization': typeof Char123LocaleChar125OnboardingOrganizationRoute
-  '/{-$locale}/settings/account': typeof Char123LocaleChar125SettingsAccountRoute
-  '/{-$locale}/settings/billing': typeof Char123LocaleChar125SettingsBillingRoute
-  '/{-$locale}/settings/organization': typeof Char123LocaleChar125SettingsOrganizationRoute
+  __root__: typeof rootRouteImport;
+  "/{-$locale}": typeof Char123LocaleChar125RouteRouteWithChildren;
+  "/{-$locale}/$": typeof Char123LocaleChar125SplatRoute;
+  "/{-$locale}/404": typeof Char123LocaleChar125404Route;
+  "/{-$locale}/dashboard": typeof Char123LocaleChar125DashboardRoute;
+  "/{-$locale}/forgot-password": typeof Char123LocaleChar125ForgotPasswordRoute;
+  "/{-$locale}/magic-link": typeof Char123LocaleChar125MagicLinkRoute;
+  "/{-$locale}/reset-password": typeof Char123LocaleChar125ResetPasswordRoute;
+  "/{-$locale}/sign-in": typeof Char123LocaleChar125SignInRoute;
+  "/{-$locale}/sign-up": typeof Char123LocaleChar125SignUpRoute;
+  "/{-$locale}/verify-email": typeof Char123LocaleChar125VerifyEmailRoute;
+  "/{-$locale}/": typeof Char123LocaleChar125IndexRoute;
+  "/api/auth/$": typeof ApiAuthSplatRoute;
+  "/{-$locale}/admin/analytics": typeof Char123LocaleChar125AdminAnalyticsRoute;
+  "/{-$locale}/invite/$invitationId": typeof Char123LocaleChar125InviteInvitationIdRoute;
+  "/{-$locale}/onboarding/organization": typeof Char123LocaleChar125OnboardingOrganizationRoute;
+  "/{-$locale}/settings/account": typeof Char123LocaleChar125SettingsAccountRoute;
+  "/{-$locale}/settings/billing": typeof Char123LocaleChar125SettingsBillingRoute;
+  "/{-$locale}/settings/organization": typeof Char123LocaleChar125SettingsOrganizationRoute;
 }
 export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath
+  fileRoutesByFullPath: FileRoutesByFullPath;
   fullPaths:
-    | '/{-$locale}'
-    | '/{-$locale}/$'
-    | '/{-$locale}/404'
-    | '/{-$locale}/dashboard'
-    | '/{-$locale}/forgot-password'
-    | '/{-$locale}/magic-link'
-    | '/{-$locale}/reset-password'
-    | '/{-$locale}/sign-in'
-    | '/{-$locale}/sign-up'
-    | '/{-$locale}/verify-email'
-    | '/{-$locale}/'
-    | '/api/auth/$'
-    | '/{-$locale}/invite/$invitationId'
-    | '/{-$locale}/onboarding/organization'
-    | '/{-$locale}/settings/account'
-    | '/{-$locale}/settings/billing'
-    | '/{-$locale}/settings/organization'
-  fileRoutesByTo: FileRoutesByTo
+    | "/{-$locale}"
+    | "/{-$locale}/$"
+    | "/{-$locale}/404"
+    | "/{-$locale}/dashboard"
+    | "/{-$locale}/forgot-password"
+    | "/{-$locale}/magic-link"
+    | "/{-$locale}/reset-password"
+    | "/{-$locale}/sign-in"
+    | "/{-$locale}/sign-up"
+    | "/{-$locale}/verify-email"
+    | "/{-$locale}/"
+    | "/api/auth/$"
+    | "/{-$locale}/admin/analytics"
+    | "/{-$locale}/invite/$invitationId"
+    | "/{-$locale}/onboarding/organization"
+    | "/{-$locale}/settings/account"
+    | "/{-$locale}/settings/billing"
+    | "/{-$locale}/settings/organization";
+  fileRoutesByTo: FileRoutesByTo;
   to:
-    | '/{-$locale}/$'
-    | '/{-$locale}/404'
-    | '/{-$locale}/dashboard'
-    | '/{-$locale}/forgot-password'
-    | '/{-$locale}/magic-link'
-    | '/{-$locale}/reset-password'
-    | '/{-$locale}/sign-in'
-    | '/{-$locale}/sign-up'
-    | '/{-$locale}/verify-email'
-    | '/{-$locale}'
-    | '/api/auth/$'
-    | '/{-$locale}/invite/$invitationId'
-    | '/{-$locale}/onboarding/organization'
-    | '/{-$locale}/settings/account'
-    | '/{-$locale}/settings/billing'
-    | '/{-$locale}/settings/organization'
+    | "/{-$locale}/$"
+    | "/{-$locale}/404"
+    | "/{-$locale}/dashboard"
+    | "/{-$locale}/forgot-password"
+    | "/{-$locale}/magic-link"
+    | "/{-$locale}/reset-password"
+    | "/{-$locale}/sign-in"
+    | "/{-$locale}/sign-up"
+    | "/{-$locale}/verify-email"
+    | "/{-$locale}"
+    | "/api/auth/$"
+    | "/{-$locale}/admin/analytics"
+    | "/{-$locale}/invite/$invitationId"
+    | "/{-$locale}/onboarding/organization"
+    | "/{-$locale}/settings/account"
+    | "/{-$locale}/settings/billing"
+    | "/{-$locale}/settings/organization";
   id:
-    | '__root__'
-    | '/{-$locale}'
-    | '/{-$locale}/$'
-    | '/{-$locale}/404'
-    | '/{-$locale}/dashboard'
-    | '/{-$locale}/forgot-password'
-    | '/{-$locale}/magic-link'
-    | '/{-$locale}/reset-password'
-    | '/{-$locale}/sign-in'
-    | '/{-$locale}/sign-up'
-    | '/{-$locale}/verify-email'
-    | '/{-$locale}/'
-    | '/api/auth/$'
-    | '/{-$locale}/invite/$invitationId'
-    | '/{-$locale}/onboarding/organization'
-    | '/{-$locale}/settings/account'
-    | '/{-$locale}/settings/billing'
-    | '/{-$locale}/settings/organization'
-  fileRoutesById: FileRoutesById
+    | "__root__"
+    | "/{-$locale}"
+    | "/{-$locale}/$"
+    | "/{-$locale}/404"
+    | "/{-$locale}/dashboard"
+    | "/{-$locale}/forgot-password"
+    | "/{-$locale}/magic-link"
+    | "/{-$locale}/reset-password"
+    | "/{-$locale}/sign-in"
+    | "/{-$locale}/sign-up"
+    | "/{-$locale}/verify-email"
+    | "/{-$locale}/"
+    | "/api/auth/$"
+    | "/{-$locale}/admin/analytics"
+    | "/{-$locale}/invite/$invitationId"
+    | "/{-$locale}/onboarding/organization"
+    | "/{-$locale}/settings/account"
+    | "/{-$locale}/settings/billing"
+    | "/{-$locale}/settings/organization";
+  fileRoutesById: FileRoutesById;
 }
 export interface RootRouteChildren {
-  Char123LocaleChar125RouteRoute: typeof Char123LocaleChar125RouteRouteWithChildren
-  ApiAuthSplatRoute: typeof ApiAuthSplatRoute
+  Char123LocaleChar125RouteRoute: typeof Char123LocaleChar125RouteRouteWithChildren;
+  ApiAuthSplatRoute: typeof ApiAuthSplatRoute;
 }
 
-declare module '@tanstack/react-router' {
+declare module "@tanstack/react-router" {
   interface FileRoutesByPath {
-    '/{-$locale}': {
-      id: '/{-$locale}'
-      path: '/{-$locale}'
-      fullPath: '/{-$locale}'
-      preLoaderRoute: typeof Char123LocaleChar125RouteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/{-$locale}/': {
-      id: '/{-$locale}/'
-      path: '/'
-      fullPath: '/{-$locale}/'
-      preLoaderRoute: typeof Char123LocaleChar125IndexRouteImport
-      parentRoute: typeof Char123LocaleChar125RouteRoute
-    }
-    '/{-$locale}/verify-email': {
-      id: '/{-$locale}/verify-email'
-      path: '/verify-email'
-      fullPath: '/{-$locale}/verify-email'
-      preLoaderRoute: typeof Char123LocaleChar125VerifyEmailRouteImport
-      parentRoute: typeof Char123LocaleChar125RouteRoute
-    }
-    '/{-$locale}/sign-up': {
-      id: '/{-$locale}/sign-up'
-      path: '/sign-up'
-      fullPath: '/{-$locale}/sign-up'
-      preLoaderRoute: typeof Char123LocaleChar125SignUpRouteImport
-      parentRoute: typeof Char123LocaleChar125RouteRoute
-    }
-    '/{-$locale}/sign-in': {
-      id: '/{-$locale}/sign-in'
-      path: '/sign-in'
-      fullPath: '/{-$locale}/sign-in'
-      preLoaderRoute: typeof Char123LocaleChar125SignInRouteImport
-      parentRoute: typeof Char123LocaleChar125RouteRoute
-    }
-    '/{-$locale}/reset-password': {
-      id: '/{-$locale}/reset-password'
-      path: '/reset-password'
-      fullPath: '/{-$locale}/reset-password'
-      preLoaderRoute: typeof Char123LocaleChar125ResetPasswordRouteImport
-      parentRoute: typeof Char123LocaleChar125RouteRoute
-    }
-    '/{-$locale}/magic-link': {
-      id: '/{-$locale}/magic-link'
-      path: '/magic-link'
-      fullPath: '/{-$locale}/magic-link'
-      preLoaderRoute: typeof Char123LocaleChar125MagicLinkRouteImport
-      parentRoute: typeof Char123LocaleChar125RouteRoute
-    }
-    '/{-$locale}/forgot-password': {
-      id: '/{-$locale}/forgot-password'
-      path: '/forgot-password'
-      fullPath: '/{-$locale}/forgot-password'
-      preLoaderRoute: typeof Char123LocaleChar125ForgotPasswordRouteImport
-      parentRoute: typeof Char123LocaleChar125RouteRoute
-    }
-    '/{-$locale}/dashboard': {
-      id: '/{-$locale}/dashboard'
-      path: '/dashboard'
-      fullPath: '/{-$locale}/dashboard'
-      preLoaderRoute: typeof Char123LocaleChar125DashboardRouteImport
-      parentRoute: typeof Char123LocaleChar125RouteRoute
-    }
-    '/{-$locale}/404': {
-      id: '/{-$locale}/404'
-      path: '/404'
-      fullPath: '/{-$locale}/404'
-      preLoaderRoute: typeof Char123LocaleChar125404RouteImport
-      parentRoute: typeof Char123LocaleChar125RouteRoute
-    }
-    '/{-$locale}/$': {
-      id: '/{-$locale}/$'
-      path: '/$'
-      fullPath: '/{-$locale}/$'
-      preLoaderRoute: typeof Char123LocaleChar125SplatRouteImport
-      parentRoute: typeof Char123LocaleChar125RouteRoute
-    }
-    '/{-$locale}/settings/organization': {
-      id: '/{-$locale}/settings/organization'
-      path: '/settings/organization'
-      fullPath: '/{-$locale}/settings/organization'
-      preLoaderRoute: typeof Char123LocaleChar125SettingsOrganizationRouteImport
-      parentRoute: typeof Char123LocaleChar125RouteRoute
-    }
-    '/{-$locale}/settings/billing': {
-      id: '/{-$locale}/settings/billing'
-      path: '/settings/billing'
-      fullPath: '/{-$locale}/settings/billing'
-      preLoaderRoute: typeof Char123LocaleChar125SettingsBillingRouteImport
-      parentRoute: typeof Char123LocaleChar125RouteRoute
-    }
-    '/{-$locale}/settings/account': {
-      id: '/{-$locale}/settings/account'
-      path: '/settings/account'
-      fullPath: '/{-$locale}/settings/account'
-      preLoaderRoute: typeof Char123LocaleChar125SettingsAccountRouteImport
-      parentRoute: typeof Char123LocaleChar125RouteRoute
-    }
-    '/{-$locale}/onboarding/organization': {
-      id: '/{-$locale}/onboarding/organization'
-      path: '/onboarding/organization'
-      fullPath: '/{-$locale}/onboarding/organization'
-      preLoaderRoute: typeof Char123LocaleChar125OnboardingOrganizationRouteImport
-      parentRoute: typeof Char123LocaleChar125RouteRoute
-    }
-    '/{-$locale}/invite/$invitationId': {
-      id: '/{-$locale}/invite/$invitationId'
-      path: '/invite/$invitationId'
-      fullPath: '/{-$locale}/invite/$invitationId'
-      preLoaderRoute: typeof Char123LocaleChar125InviteInvitationIdRouteImport
-      parentRoute: typeof Char123LocaleChar125RouteRoute
-    }
-    '/api/auth/$': {
-      id: '/api/auth/$'
-      path: '/api/auth/$'
-      fullPath: '/api/auth/$'
-      preLoaderRoute: typeof ApiAuthSplatRouteImport
-      parentRoute: typeof rootRouteImport
-    }
+    "/{-$locale}": {
+      id: "/{-$locale}";
+      path: "/{-$locale}";
+      fullPath: "/{-$locale}";
+      preLoaderRoute: typeof Char123LocaleChar125RouteRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/{-$locale}/": {
+      id: "/{-$locale}/";
+      path: "/";
+      fullPath: "/{-$locale}/";
+      preLoaderRoute: typeof Char123LocaleChar125IndexRouteImport;
+      parentRoute: typeof Char123LocaleChar125RouteRoute;
+    };
+    "/{-$locale}/verify-email": {
+      id: "/{-$locale}/verify-email";
+      path: "/verify-email";
+      fullPath: "/{-$locale}/verify-email";
+      preLoaderRoute: typeof Char123LocaleChar125VerifyEmailRouteImport;
+      parentRoute: typeof Char123LocaleChar125RouteRoute;
+    };
+    "/{-$locale}/sign-up": {
+      id: "/{-$locale}/sign-up";
+      path: "/sign-up";
+      fullPath: "/{-$locale}/sign-up";
+      preLoaderRoute: typeof Char123LocaleChar125SignUpRouteImport;
+      parentRoute: typeof Char123LocaleChar125RouteRoute;
+    };
+    "/{-$locale}/sign-in": {
+      id: "/{-$locale}/sign-in";
+      path: "/sign-in";
+      fullPath: "/{-$locale}/sign-in";
+      preLoaderRoute: typeof Char123LocaleChar125SignInRouteImport;
+      parentRoute: typeof Char123LocaleChar125RouteRoute;
+    };
+    "/{-$locale}/reset-password": {
+      id: "/{-$locale}/reset-password";
+      path: "/reset-password";
+      fullPath: "/{-$locale}/reset-password";
+      preLoaderRoute: typeof Char123LocaleChar125ResetPasswordRouteImport;
+      parentRoute: typeof Char123LocaleChar125RouteRoute;
+    };
+    "/{-$locale}/magic-link": {
+      id: "/{-$locale}/magic-link";
+      path: "/magic-link";
+      fullPath: "/{-$locale}/magic-link";
+      preLoaderRoute: typeof Char123LocaleChar125MagicLinkRouteImport;
+      parentRoute: typeof Char123LocaleChar125RouteRoute;
+    };
+    "/{-$locale}/forgot-password": {
+      id: "/{-$locale}/forgot-password";
+      path: "/forgot-password";
+      fullPath: "/{-$locale}/forgot-password";
+      preLoaderRoute: typeof Char123LocaleChar125ForgotPasswordRouteImport;
+      parentRoute: typeof Char123LocaleChar125RouteRoute;
+    };
+    "/{-$locale}/dashboard": {
+      id: "/{-$locale}/dashboard";
+      path: "/dashboard";
+      fullPath: "/{-$locale}/dashboard";
+      preLoaderRoute: typeof Char123LocaleChar125DashboardRouteImport;
+      parentRoute: typeof Char123LocaleChar125RouteRoute;
+    };
+    "/{-$locale}/404": {
+      id: "/{-$locale}/404";
+      path: "/404";
+      fullPath: "/{-$locale}/404";
+      preLoaderRoute: typeof Char123LocaleChar125404RouteImport;
+      parentRoute: typeof Char123LocaleChar125RouteRoute;
+    };
+    "/{-$locale}/$": {
+      id: "/{-$locale}/$";
+      path: "/$";
+      fullPath: "/{-$locale}/$";
+      preLoaderRoute: typeof Char123LocaleChar125SplatRouteImport;
+      parentRoute: typeof Char123LocaleChar125RouteRoute;
+    };
+    "/{-$locale}/settings/organization": {
+      id: "/{-$locale}/settings/organization";
+      path: "/settings/organization";
+      fullPath: "/{-$locale}/settings/organization";
+      preLoaderRoute: typeof Char123LocaleChar125SettingsOrganizationRouteImport;
+      parentRoute: typeof Char123LocaleChar125RouteRoute;
+    };
+    "/{-$locale}/settings/billing": {
+      id: "/{-$locale}/settings/billing";
+      path: "/settings/billing";
+      fullPath: "/{-$locale}/settings/billing";
+      preLoaderRoute: typeof Char123LocaleChar125SettingsBillingRouteImport;
+      parentRoute: typeof Char123LocaleChar125RouteRoute;
+    };
+    "/{-$locale}/settings/account": {
+      id: "/{-$locale}/settings/account";
+      path: "/settings/account";
+      fullPath: "/{-$locale}/settings/account";
+      preLoaderRoute: typeof Char123LocaleChar125SettingsAccountRouteImport;
+      parentRoute: typeof Char123LocaleChar125RouteRoute;
+    };
+    "/{-$locale}/onboarding/organization": {
+      id: "/{-$locale}/onboarding/organization";
+      path: "/onboarding/organization";
+      fullPath: "/{-$locale}/onboarding/organization";
+      preLoaderRoute: typeof Char123LocaleChar125OnboardingOrganizationRouteImport;
+      parentRoute: typeof Char123LocaleChar125RouteRoute;
+    };
+    "/{-$locale}/invite/$invitationId": {
+      id: "/{-$locale}/invite/$invitationId";
+      path: "/invite/$invitationId";
+      fullPath: "/{-$locale}/invite/$invitationId";
+      preLoaderRoute: typeof Char123LocaleChar125InviteInvitationIdRouteImport;
+      parentRoute: typeof Char123LocaleChar125RouteRoute;
+    };
+    "/{-$locale}/admin/analytics": {
+      id: "/{-$locale}/admin/analytics";
+      path: "/admin/analytics";
+      fullPath: "/{-$locale}/admin/analytics";
+      preLoaderRoute: typeof Char123LocaleChar125AdminAnalyticsRouteImport;
+      parentRoute: typeof Char123LocaleChar125RouteRoute;
+    };
+    "/api/auth/$": {
+      id: "/api/auth/$";
+      path: "/api/auth/$";
+      fullPath: "/api/auth/$";
+      preLoaderRoute: typeof ApiAuthSplatRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
   }
 }
 
 interface Char123LocaleChar125RouteRouteChildren {
-  Char123LocaleChar125SplatRoute: typeof Char123LocaleChar125SplatRoute
-  Char123LocaleChar125404Route: typeof Char123LocaleChar125404Route
-  Char123LocaleChar125DashboardRoute: typeof Char123LocaleChar125DashboardRoute
-  Char123LocaleChar125ForgotPasswordRoute: typeof Char123LocaleChar125ForgotPasswordRoute
-  Char123LocaleChar125MagicLinkRoute: typeof Char123LocaleChar125MagicLinkRoute
-  Char123LocaleChar125ResetPasswordRoute: typeof Char123LocaleChar125ResetPasswordRoute
-  Char123LocaleChar125SignInRoute: typeof Char123LocaleChar125SignInRoute
-  Char123LocaleChar125SignUpRoute: typeof Char123LocaleChar125SignUpRoute
-  Char123LocaleChar125VerifyEmailRoute: typeof Char123LocaleChar125VerifyEmailRoute
-  Char123LocaleChar125IndexRoute: typeof Char123LocaleChar125IndexRoute
-  Char123LocaleChar125InviteInvitationIdRoute: typeof Char123LocaleChar125InviteInvitationIdRoute
-  Char123LocaleChar125OnboardingOrganizationRoute: typeof Char123LocaleChar125OnboardingOrganizationRoute
-  Char123LocaleChar125SettingsAccountRoute: typeof Char123LocaleChar125SettingsAccountRoute
-  Char123LocaleChar125SettingsBillingRoute: typeof Char123LocaleChar125SettingsBillingRoute
-  Char123LocaleChar125SettingsOrganizationRoute: typeof Char123LocaleChar125SettingsOrganizationRoute
+  Char123LocaleChar125SplatRoute: typeof Char123LocaleChar125SplatRoute;
+  Char123LocaleChar125404Route: typeof Char123LocaleChar125404Route;
+  Char123LocaleChar125DashboardRoute: typeof Char123LocaleChar125DashboardRoute;
+  Char123LocaleChar125ForgotPasswordRoute: typeof Char123LocaleChar125ForgotPasswordRoute;
+  Char123LocaleChar125MagicLinkRoute: typeof Char123LocaleChar125MagicLinkRoute;
+  Char123LocaleChar125ResetPasswordRoute: typeof Char123LocaleChar125ResetPasswordRoute;
+  Char123LocaleChar125SignInRoute: typeof Char123LocaleChar125SignInRoute;
+  Char123LocaleChar125SignUpRoute: typeof Char123LocaleChar125SignUpRoute;
+  Char123LocaleChar125VerifyEmailRoute: typeof Char123LocaleChar125VerifyEmailRoute;
+  Char123LocaleChar125IndexRoute: typeof Char123LocaleChar125IndexRoute;
+  Char123LocaleChar125AdminAnalyticsRoute: typeof Char123LocaleChar125AdminAnalyticsRoute;
+  Char123LocaleChar125InviteInvitationIdRoute: typeof Char123LocaleChar125InviteInvitationIdRoute;
+  Char123LocaleChar125OnboardingOrganizationRoute: typeof Char123LocaleChar125OnboardingOrganizationRoute;
+  Char123LocaleChar125SettingsAccountRoute: typeof Char123LocaleChar125SettingsAccountRoute;
+  Char123LocaleChar125SettingsBillingRoute: typeof Char123LocaleChar125SettingsBillingRoute;
+  Char123LocaleChar125SettingsOrganizationRoute: typeof Char123LocaleChar125SettingsOrganizationRoute;
 }
 
-const Char123LocaleChar125RouteRouteChildren: Char123LocaleChar125RouteRouteChildren =
-  {
-    Char123LocaleChar125SplatRoute: Char123LocaleChar125SplatRoute,
-    Char123LocaleChar125404Route: Char123LocaleChar125404Route,
-    Char123LocaleChar125DashboardRoute: Char123LocaleChar125DashboardRoute,
-    Char123LocaleChar125ForgotPasswordRoute:
-      Char123LocaleChar125ForgotPasswordRoute,
-    Char123LocaleChar125MagicLinkRoute: Char123LocaleChar125MagicLinkRoute,
-    Char123LocaleChar125ResetPasswordRoute:
-      Char123LocaleChar125ResetPasswordRoute,
-    Char123LocaleChar125SignInRoute: Char123LocaleChar125SignInRoute,
-    Char123LocaleChar125SignUpRoute: Char123LocaleChar125SignUpRoute,
-    Char123LocaleChar125VerifyEmailRoute: Char123LocaleChar125VerifyEmailRoute,
-    Char123LocaleChar125IndexRoute: Char123LocaleChar125IndexRoute,
-    Char123LocaleChar125InviteInvitationIdRoute:
-      Char123LocaleChar125InviteInvitationIdRoute,
-    Char123LocaleChar125OnboardingOrganizationRoute:
-      Char123LocaleChar125OnboardingOrganizationRoute,
-    Char123LocaleChar125SettingsAccountRoute:
-      Char123LocaleChar125SettingsAccountRoute,
-    Char123LocaleChar125SettingsBillingRoute:
-      Char123LocaleChar125SettingsBillingRoute,
-    Char123LocaleChar125SettingsOrganizationRoute:
-      Char123LocaleChar125SettingsOrganizationRoute,
-  }
+const Char123LocaleChar125RouteRouteChildren: Char123LocaleChar125RouteRouteChildren = {
+  Char123LocaleChar125SplatRoute: Char123LocaleChar125SplatRoute,
+  Char123LocaleChar125404Route: Char123LocaleChar125404Route,
+  Char123LocaleChar125DashboardRoute: Char123LocaleChar125DashboardRoute,
+  Char123LocaleChar125ForgotPasswordRoute: Char123LocaleChar125ForgotPasswordRoute,
+  Char123LocaleChar125MagicLinkRoute: Char123LocaleChar125MagicLinkRoute,
+  Char123LocaleChar125ResetPasswordRoute: Char123LocaleChar125ResetPasswordRoute,
+  Char123LocaleChar125SignInRoute: Char123LocaleChar125SignInRoute,
+  Char123LocaleChar125SignUpRoute: Char123LocaleChar125SignUpRoute,
+  Char123LocaleChar125VerifyEmailRoute: Char123LocaleChar125VerifyEmailRoute,
+  Char123LocaleChar125IndexRoute: Char123LocaleChar125IndexRoute,
+  Char123LocaleChar125AdminAnalyticsRoute: Char123LocaleChar125AdminAnalyticsRoute,
+  Char123LocaleChar125InviteInvitationIdRoute: Char123LocaleChar125InviteInvitationIdRoute,
+  Char123LocaleChar125OnboardingOrganizationRoute: Char123LocaleChar125OnboardingOrganizationRoute,
+  Char123LocaleChar125SettingsAccountRoute: Char123LocaleChar125SettingsAccountRoute,
+  Char123LocaleChar125SettingsBillingRoute: Char123LocaleChar125SettingsBillingRoute,
+  Char123LocaleChar125SettingsOrganizationRoute: Char123LocaleChar125SettingsOrganizationRoute,
+};
 
-const Char123LocaleChar125RouteRouteWithChildren =
-  Char123LocaleChar125RouteRoute._addFileChildren(
-    Char123LocaleChar125RouteRouteChildren,
-  )
+const Char123LocaleChar125RouteRouteWithChildren = Char123LocaleChar125RouteRoute._addFileChildren(
+  Char123LocaleChar125RouteRouteChildren,
+);
 
 const rootRouteChildren: RootRouteChildren = {
   Char123LocaleChar125RouteRoute: Char123LocaleChar125RouteRouteWithChildren,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
-}
+};
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
-  ._addFileTypes<FileRouteTypes>()
+  ._addFileTypes<FileRouteTypes>();
 
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
+import type { getRouter } from "./router.tsx";
+import type { createStart } from "@tanstack/react-start";
+declare module "@tanstack/react-start" {
   interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
+    ssr: true;
+    router: Awaited<ReturnType<typeof getRouter>>;
   }
 }

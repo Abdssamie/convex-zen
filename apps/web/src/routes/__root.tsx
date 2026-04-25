@@ -12,6 +12,7 @@ import {
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 import { createServerFn } from "@tanstack/react-start";
 
+import { createAnalytics } from "@abdssamie/convex-analytics";
 import { authClient } from "@/lib/auth-client";
 import { getToken } from "@/lib/auth-server";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -21,9 +22,16 @@ import { IntlayerProvider } from "react-intlayer";
 import { Route as LocaleRoute } from "./{-$locale}/route";
 
 import appCss from "../index.css?url";
+import { env } from "@convex-zen/env/web";
 
 const getAuth = createServerFn({ method: "GET" }).handler(async () => {
   return await getToken();
+});
+
+const analytics = createAnalytics({
+  endpoint: `$convex-analytics.js{env.VITE_CONVEX_SITE_URL}/analytics/ingest`,
+  writeKey: env.VITE_ANALYTICS_WRITE_KEY,
+  autoPageviews: false,
 });
 
 export interface RouterAppContext {
@@ -76,6 +84,8 @@ export const Route = createRootRouteWithContext<RouterAppContext>()({
   component: () => {
     const context = useRouteContext({ from: Route.id });
 
+    analytics.page();
+
     return (
       <QueryClientProvider client={context.queryClient}>
         <ConvexBetterAuthProvider
@@ -114,6 +124,13 @@ function RootDocument({ children }: { children: React.ReactNode }) {
     <html dir={getHTMLTextDir(locale)} lang={locale} suppressHydrationWarning>
       <head>
         <HeadContent />
+        <script
+          defer
+          data-endpoint={`${env.VITE_CONVEX_SITE_URL}/analytics/ingest`}
+          src="https://unpkg.com/@abdssamie/convex-analytics@0.1.6/dist/embed/convex-analytics.js"
+          data-write-key={env.VITE_ANALYTICS_WRITE_KEY}
+          data-auto-pageviews="true"
+        ></script>
       </head>
       <body>
         <IntlayerProvider locale={locale}>

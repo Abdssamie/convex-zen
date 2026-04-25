@@ -96,12 +96,15 @@ importers:
 
   apps/web:
     dependencies:
+      '@abdssamie/convex-analytics':
+        specifier: ^0.1.6
+        version: 0.1.6(convex@1.35.1(react@19.2.5))(react@19.2.5)
       '@convex-dev/better-auth':
         specifier: 'catalog:'
         version: 0.11.4(@standard-schema/spec@1.1.0)(better-auth@1.5.3(@cloudflare/workers-types@4.20260418.1)(@tanstack/react-start@1.167.36(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(vite@8.0.8(@types/node@25.6.0)(esbuild@0.27.7)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.8.3)))(drizzle-orm@0.45.2(@cloudflare/workers-types@4.20260418.1)(kysely@0.28.16))(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(vitest@4.1.4))(convex@1.35.1(react@19.2.5))(hono@4.12.12)(react@19.2.5)(typescript@5.9.3)
       '@convex-dev/polar':
         specifier: ^0.9.0
-        version: 0.9.0(@polar-sh/checkout@0.2.0(@stripe/react-stripe-js@4.0.2(@stripe/stripe-js@7.9.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5))(@stripe/stripe-js@7.9.0)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.5(react@19.2.5))(react-is@17.0.2)(react@19.2.5)(redux@5.0.1))(@polar-sh/sdk@0.47.0)(@standard-schema/spec@1.1.0)(convex@1.35.1(react@19.2.5))(hono@4.12.12)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(typescript@5.9.3)(zod@4.3.6)
+        version: 0.9.0(@polar-sh/checkout@0.2.0(@stripe/react-stripe-js@4.0.2(@stripe/stripe-js@7.9.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5))(@stripe/stripe-js@7.9.0)(react-dom@19.2.5(react@19.2.5))(react-is@17.0.2)(react@19.2.5))(@polar-sh/sdk@0.47.0)(@standard-schema/spec@1.1.0)(convex@1.35.1(react@19.2.5))(hono@4.12.12)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(typescript@5.9.3)(zod@4.3.6)
       '@convex-dev/react-query':
         specifier: ^0.1.0
         version: 0.1.0(@tanstack/react-query@5.99.0(react@19.2.5))(convex@1.35.1(react@19.2.5))
@@ -349,12 +352,15 @@ importers:
 
   packages/backend:
     dependencies:
+      '@abdssamie/convex-analytics':
+        specifier: ^0.1.6
+        version: 0.1.6(convex@1.35.1(react@19.2.5))(react@19.2.5)
       '@convex-dev/better-auth':
         specifier: 'catalog:'
         version: 0.11.4(@standard-schema/spec@1.1.0)(better-auth@1.5.3(@cloudflare/workers-types@4.20260418.1)(@tanstack/react-start@1.167.36(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(vite@8.0.8(@types/node@25.6.0)(esbuild@0.27.7)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.8.3)))(drizzle-orm@0.45.2(@cloudflare/workers-types@4.20260418.1)(kysely@0.28.16))(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(vitest@4.1.4))(convex@1.35.1(react@19.2.5))(hono@4.12.12)(react@19.2.5)(typescript@5.9.3)
       '@convex-dev/polar':
         specifier: ^0.9.0
-        version: 0.9.0(@polar-sh/checkout@0.2.0(@stripe/react-stripe-js@4.0.2(@stripe/stripe-js@7.9.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5))(@stripe/stripe-js@7.9.0)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.5(react@19.2.5))(react-is@17.0.2)(react@19.2.5)(redux@5.0.1))(@polar-sh/sdk@0.47.0)(@standard-schema/spec@1.1.0)(convex@1.35.1(react@19.2.5))(hono@4.12.12)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(typescript@5.9.3)(zod@4.3.6)
+        version: 0.9.0(@polar-sh/checkout@0.2.0(@stripe/react-stripe-js@4.0.2(@stripe/stripe-js@7.9.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5))(@stripe/stripe-js@7.9.0)(react-dom@19.2.5(react@19.2.5))(react-is@17.0.2)(react@19.2.5))(@polar-sh/sdk@0.47.0)(@standard-schema/spec@1.1.0)(convex@1.35.1(react@19.2.5))(hono@4.12.12)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(typescript@5.9.3)(zod@4.3.6)
       '@convex-dev/r2':
         specifier: ^0.9.2
         version: 0.9.2(@standard-schema/spec@1.1.0)(convex@1.35.1(react@19.2.5))(hono@4.12.12)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(typescript@5.9.3)(zod@4.3.6)
@@ -566,6 +572,12 @@ importers:
         version: 5.9.3
 
 packages:
+
+  '@abdssamie/convex-analytics@0.1.6':
+    resolution: {integrity: sha512-lxsN+UWV0Pajc4ZmeR/ZFGJgaKm8JRuvsTDVUL2988/pHtFZOjQu8zQ90+vvPPCVwG/IRgoLuVwqmBwKD6l0vw==}
+    peerDependencies:
+      convex: ^1.35.1
+      react: ^18.3.1 || ^19.0.0
 
   '@asamuzakjp/css-color@3.2.0':
     resolution: {integrity: sha512-K1A6z8tS3XsmCMM86xoWdn7Fkdn9m6RSVtocUrJYIwZnFVkng/PvkEoWtOWmP+Scc6saYWHWZYbndEEXxl24jw==}
@@ -6001,6 +6013,11 @@ packages:
 
 snapshots:
 
+  '@abdssamie/convex-analytics@0.1.6(convex@1.35.1(react@19.2.5))(react@19.2.5)':
+    dependencies:
+      convex: 1.35.1(react@19.2.5)
+      react: 19.2.5
+
   '@asamuzakjp/css-color@3.2.0':
     dependencies:
       '@csstools/css-calc': 2.1.4(@csstools/css-parser-algorithms@3.0.5(@csstools/css-tokenizer@3.0.4))(@csstools/css-tokenizer@3.0.4)
@@ -6731,7 +6748,7 @@ snapshots:
       - hono
       - typescript
 
-  '@convex-dev/polar@0.9.0(@polar-sh/checkout@0.2.0(@stripe/react-stripe-js@4.0.2(@stripe/stripe-js@7.9.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5))(@stripe/stripe-js@7.9.0)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.5(react@19.2.5))(react-is@17.0.2)(react@19.2.5)(redux@5.0.1))(@polar-sh/sdk@0.47.0)(@standard-schema/spec@1.1.0)(convex@1.35.1(react@19.2.5))(hono@4.12.12)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(typescript@5.9.3)(zod@4.3.6)':
+  '@convex-dev/polar@0.9.0(@polar-sh/checkout@0.2.0(@stripe/react-stripe-js@4.0.2(@stripe/stripe-js@7.9.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5))(@stripe/stripe-js@7.9.0)(react-dom@19.2.5(react@19.2.5))(react-is@17.0.2)(react@19.2.5))(@polar-sh/sdk@0.47.0)(@standard-schema/spec@1.1.0)(convex@1.35.1(react@19.2.5))(hono@4.12.12)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(typescript@5.9.3)(zod@4.3.6)':
     dependencies:
       '@polar-sh/checkout': 0.2.0(@stripe/react-stripe-js@4.0.2(@stripe/stripe-js@7.9.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5))(@stripe/stripe-js@7.9.0)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.5(react@19.2.5))(react-is@17.0.2)(react@19.2.5)(redux@5.0.1)
       '@polar-sh/sdk': 0.47.0
@@ -8528,7 +8545,7 @@ snapshots:
 
   '@radix-ui/rect@1.1.1': {}
 
-  '@reduxjs/toolkit@2.11.2(react-redux@9.2.0(@types/react@19.2.14)(react@19.2.5)(redux@5.0.1))(react@19.2.5)':
+  '@reduxjs/toolkit@2.11.2(react-redux@9.2.0(react@19.2.5))(react@19.2.5)':
     dependencies:
       '@standard-schema/spec': 1.1.0
       '@standard-schema/utils': 0.3.0
@@ -10804,7 +10821,7 @@ snapshots:
 
   recharts@3.8.1(@types/react@19.2.14)(react-dom@19.2.5(react@19.2.5))(react-is@17.0.2)(react@19.2.5)(redux@5.0.1):
     dependencies:
-      '@reduxjs/toolkit': 2.11.2(react-redux@9.2.0(@types/react@19.2.14)(react@19.2.5)(redux@5.0.1))(react@19.2.5)
+      '@reduxjs/toolkit': 2.11.2(react-redux@9.2.0(react@19.2.5))(react@19.2.5)
       clsx: 2.1.1
       decimal.js-light: 2.5.1
       es-toolkit: 1.45.1

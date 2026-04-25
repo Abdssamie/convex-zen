@@ -3,6 +3,7 @@
 import * as React from "react";
 import {
   LayoutDashboard,
+  ChartColumn,
   House,
   LogIn,
   UserPlus,
@@ -24,6 +25,7 @@ import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader } from "@/compone
 
 const iconMap: Record<string, LucideIcon> = {
   "/dashboard": LayoutDashboard,
+  "/admin/analytics": ChartColumn,
   "/": House,
   "/sign-in": LogIn,
   "/sign-up": UserPlus,
