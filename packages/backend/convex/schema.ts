@@ -18,6 +18,15 @@ export const tables = {
     .index("by_messageId", ["messageId"])
     .index("by_event", ["event"])
     .index("by_ts", ["ts"]),
+  users: defineTable({
+    authId: v.string(),
+    name: v.string(),
+    email: v.string(),
+    createdAt: v.number(),
+    updatedAt: v.number(),
+  })
+    .index("by_authId", ["authId"])
+    .index("by_email", ["email"]),
 };
 
 export default defineSchema(tables);

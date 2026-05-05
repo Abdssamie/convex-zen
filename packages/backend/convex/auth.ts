@@ -1,12 +1,13 @@
-import { createClient, type GenericCtx } from "@convex-dev/better-auth";
+import { type AuthFunctions, createClient, type GenericCtx } from "@convex-dev/better-auth";
 import { convex } from "@convex-dev/better-auth/plugins";
 import { betterAuth, type User, APIError } from "better-auth";
 import { magicLink, organization } from "better-auth/plugins";
 
-import { components } from "./_generated/api";
+import { components, internal } from "./_generated/api";
 import type { DataModel } from "./_generated/dataModel";
-import { query, type ActionCtx } from "./_generated/server";
+import { type ActionCtx } from "./_generated/server";
 import authConfig from "./auth.config";
+import authSchema from "./features/auth/schema";
 import {
   sendVerificationEmail,
   sendPasswordResetEmail,
@@ -15,6 +16,8 @@ import {
   sendWelcomeEmail,
 } from "./features/email/betterAuth";
 import { rateLimiter } from "./lib/rateLimiter";
+
+const authFunctions: AuthFunctions = internal.auth;
 
 function normalizeUrl(url: string) {
   return url.replace(/\/$/, "");
@@ -37,7 +40,52 @@ function getTrustedOrigins() {
 const trustedOrigins = getTrustedOrigins();
 const siteUrl = trustedOrigins[0] ?? "";
 
-export const authComponent = createClient<DataModel>(components.betterAuth);
+export const authComponent = createClient<DataModel, typeof authSchema>(components.betterAuth, {
+  local: {
+    schema: authSchema,
+  },
+  authFunctions,
+  triggers: {
+    user: {
+      onCreate: async (ctx, authUser) => {
+        await ctx.db.insert("users", {
+          authId: authUser._id,
+          name: authUser.name,
+          email: authUser.email,
+          createdAt: authUser.createdAt,
+          updatedAt: authUser.updatedAt,
+        });
+      },
+      onUpdate: async (ctx, authUser) => {
+        const user = await ctx.db
+          .query("users")
+          .withIndex("by_authId", (q) => q.eq("authId", authUser._id))
+          .unique();
+        if (!user) {
+          return;
+        }
+        await ctx.db.patch("users", user._id, {
+          email: authUser.email,
+          name: authUser.name,
+          updatedAt: authUser.updatedAt,
+        });
+      },
+      onDelete: async (ctx, authUser) => {
+        const user = await ctx.db
+          .query("users")
+          .withIndex("by_authId", (q) => q.eq("authId", authUser._id))
+          .unique();
+        if (!user) {
+          return;
+        }
+        await ctx.db.delete("users", user._id);
+      },
+    },
+  },
+});
+
+export const { onCreate, onUpdate, onDelete } = authComponent.triggersApi();
+export const { getAuthUser: getCurrentUser } = authComponent.clientApi();
 
 function normalizeOrganizationInput<T extends { name?: string; slug?: string; logo?: string }>(
   organization: T,
@@ -143,10 +191,3 @@ function createAuth(ctx: GenericCtx<DataModel>) {
 }
 
 export { createAuth, getBetterAuthConfig };
-
-export const getCurrentUser = query({
-  args: {},
-  handler: async (ctx) => {
-    return await authComponent.safeGetAuthUser(ctx);
-  },
-});
