@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "deploy": "vite build && wrangler deploy --config dist/server/wrangler.json --keep-vars --var SITE_URL:$SITE_URL --var VITE_ANALYTICS_WRITE_KEY:$VITE_ANALYTICS_WRITE_KEY --var VITE_CONVEX_SITE_URL:$VITE_CONVEX_SITE_URL --var VITE_CONVEX_URL:$VITE_CONVEX_URL",
+    "deploy": "vite build && wrangler deploy --config dist/server/wrangler.json --keep-vars --var SITE_URL:$SITE_URL --var VITE_CONVEX_SITE_URL:$VITE_CONVEX_SITE_URL --var VITE_CONVEX_URL:$VITE_CONVEX_URL",
     "destroy": "node ../../scripts/destroy-web.mjs",
     "serve": "vite preview",
     "dev:bare": "vite dev",

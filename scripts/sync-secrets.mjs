@@ -6,7 +6,7 @@ import { readProjectConfig } from "./_project-config.mjs";
 const config = readProjectConfig();
 const workerName = config.workerName;
 
-const CLOUDFLARE_SECRETS = [];
+const CLOUDFLARE_SECRETS = ["VITE_ANALYTICS_WRITE_KEY"];
 
 const CONVEX_SECRETS = [
   "SITE_URL",
