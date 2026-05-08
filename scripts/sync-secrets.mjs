@@ -9,6 +9,7 @@ const workerName = config.workerName;
 const CLOUDFLARE_SECRETS = ["VITE_ANALYTICS_WRITE_KEY"];
 
 const CONVEX_SECRETS = [
+  "ANALYTICS_WRITE_KEY",
   "SITE_URL",
   "AUTH_TRUSTED_ORIGINS",
   "BETTER_AUTH_SECRET",

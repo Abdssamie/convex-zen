@@ -24,6 +24,7 @@ jobs:
       # Auth
       BETTER_AUTH_SECRET: ${{ secrets.BETTER_AUTH_SECRET }}
       ADMIN_EMAIL: ${{ secrets.ADMIN_EMAIL }}
+      ANALYTICS_WRITE_KEY: ${{ secrets.ANALYTICS_WRITE_KEY }}
       
       # Brevo
       BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
