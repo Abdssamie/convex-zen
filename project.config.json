@@ -7,7 +7,7 @@
     "observabilityEnabled": true
   },
   "env": {
-    "frontend": ["VITE_CONVEX_URL", "VITE_CONVEX_SITE_URL"],
+    "frontend": ["VITE_ANALYTICS_WRITE_KEY", "VITE_CONVEX_URL", "VITE_CONVEX_SITE_URL"],
     "worker": ["SITE_URL"],
     "convexProduction": ["SITE_URL", "AUTH_TRUSTED_ORIGINS"]
   }
