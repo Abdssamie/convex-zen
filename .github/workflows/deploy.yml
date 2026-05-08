@@ -79,3 +79,17 @@ jobs:
         run: |
           cd apps/web
           pnpm run deploy
+
+      - name: Verify deployment
+        run: |
+          WORKER_NAME=$(node -e "console.log(require('./project.config.json').workerName)")
+          DEPLOYMENT_URL="https://${WORKER_NAME}.abdessamie-elmoubarki.workers.dev"
+          echo "Checking $DEPLOYMENT_URL..."
+          sleep 10
+          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "$DEPLOYMENT_URL" || echo "000")
+          if [ "$HTTP_CODE" = "200" ]; then
+            echo "✓ Deployment verified: $HTTP_CODE"
+          else
+            echo "✗ Deployment failed: got $HTTP_CODE"
+            exit 1
+          fi

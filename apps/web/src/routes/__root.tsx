@@ -28,11 +28,13 @@ const getAuth = createServerFn({ method: "GET" }).handler(async () => {
   return await getToken();
 });
 
-const analytics = createAnalytics({
-  endpoint: `$convex-analytics.js{env.VITE_CONVEX_SITE_URL}/analytics/ingest`,
-  writeKey: env.VITE_ANALYTICS_WRITE_KEY,
-  autoPageviews: false,
-});
+function getAnalytics() {
+  return createAnalytics({
+    endpoint: `${env.VITE_CONVEX_SITE_URL}/analytics/ingest`,
+    writeKey: env.VITE_ANALYTICS_WRITE_KEY,
+    autoPageviews: false,
+  });
+}
 
 export interface RouterAppContext {
   queryClient: QueryClient;
@@ -84,7 +86,7 @@ export const Route = createRootRouteWithContext<RouterAppContext>()({
   component: () => {
     const context = useRouteContext({ from: Route.id });
 
-    analytics.page();
+    getAnalytics().page();
 
     return (
       <QueryClientProvider client={context.queryClient}>
