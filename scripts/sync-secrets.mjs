@@ -6,7 +6,7 @@ import { readProjectConfig } from "./_project-config.mjs";
 const config = readProjectConfig();
 const workerName = config.workerName;
 
-const CLOUDFLARE_SECRETS = Array.from(new Set([...config.env.worker, ...config.env.frontend]));
+const CLOUDFLARE_SECRETS = [];
 
 const CONVEX_SECRETS = [
   "SITE_URL",
