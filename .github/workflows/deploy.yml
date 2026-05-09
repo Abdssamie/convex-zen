@@ -77,6 +77,11 @@ jobs:
           cd packages/backend
           npx convex deploy
 
+      - name: Provision analytics site
+        run: |
+          cd packages/backend
+          npx convex run --prod analytics:provisionDefaultSite
+
       - name: Deploy app
         run: |
           cd apps/web

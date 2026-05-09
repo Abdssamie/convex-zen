@@ -51,6 +51,6 @@ export const provisionDefaultSite = provisionSite(components.convexAnalytics, {
     slug: "default",
     name: "Default site",
     writeKey: process.env.ANALYTICS_WRITE_KEY!,
-    allowedOrigins: [],
+    allowedOrigins: ["https://convex-zen-web-abdssamie.abdessamie-elmoubarki.workers.dev"],
   },
 });
