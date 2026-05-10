@@ -1,0 +1,52 @@
+image: node:22
+
+stages:
+  - lint
+  - typecheck
+  - test
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - .pnpm-store
+
+install-deps:
+  stage: .pre
+  script:
+    - corepack enable
+    - corepack prepare pnpm@latest --activate
+    - pnpm install --frozen-lockfile
+  cache:
+    key: pnpm-${CI_COMMIT_SHORT_SHA}
+    paths:
+      - .pnpm-store
+      - node_modules
+  artifacts:
+    paths:
+      - node_modules/
+      - .pnpm-store/
+    expire_in: 1 hour
+
+lint:
+  stage: lint
+  needs: [install-deps]
+  script:
+    - pnpm lint
+  allow_failure: false
+
+typecheck:
+  stage: typecheck
+  needs: [install-deps]
+  script:
+    - pnpm typecheck
+  allow_failure: false
+
+test:
+  stage: test
+  needs: [install-deps]
+  script:
+    - pnpm --filter @convex-zen/backend run test
+  allow_failure: false
