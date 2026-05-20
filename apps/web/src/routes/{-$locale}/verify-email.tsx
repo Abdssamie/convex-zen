@@ -1,10 +1,8 @@
-import { api } from "@convex-zen/backend/convex/_generated/api";
 import { Button } from "@convex-zen/ui/components/button";
 import { LocalizedLink } from "@/components/localized-link";
 import { useLocalizedNavigate } from "@/hooks/useLocalizedNavigate";
 import type { LocalizedTo } from "@/hooks/useLocalizedNavigate";
 import { createFileRoute } from "@tanstack/react-router";
-import { useQuery } from "convex/react";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 
@@ -24,8 +22,8 @@ export const Route = createFileRoute("/{-$locale}/verify-email")({
 
 function RouteComponent() {
   const navigate = useLocalizedNavigate();
-  const user = useQuery(api.auth.getCurrentUser);
   const { token, email, redirectTo } = Route.useSearch();
+  const session = authClient.useSession();
   const safeRedirectTo = redirectTo ?? "/onboarding/organization";
   const [status, setStatus] = useState<"idle" | "verifying" | "verified" | "failed">(
     token ? "verifying" : "idle",
@@ -69,7 +67,7 @@ function RouteComponent() {
     };
   }, [navigate, safeRedirectTo, token]);
 
-  const resendEmail = user?.email ?? email;
+  const resendEmail = session.data?.user?.email ?? email;
 
   return (
     <AuthLayout

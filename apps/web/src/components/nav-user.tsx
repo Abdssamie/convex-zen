@@ -2,6 +2,8 @@
 
 import { CreditCard, EllipsisVertical, LogOut, CircleUser, Building2 } from "lucide-react";
 import { LocalizedLink } from "@/components/localized-link";
+import { useLocalizedNavigate } from "@/hooks/useLocalizedNavigate";
+import type { LocalizedTo } from "@/hooks/useLocalizedNavigate";
 
 import { authClient } from "@/lib/auth-client";
 import { Logo } from "@/components/logo";
@@ -31,6 +33,7 @@ export function NavUser({
   };
 }) {
   const { isMobile } = useSidebar();
+  const navigate = useLocalizedNavigate();
 
   return (
     <SidebarMenu>
@@ -96,7 +99,7 @@ export function NavUser({
                 authClient.signOut({
                   fetchOptions: {
                     onSuccess: () => {
-                      location.reload();
+                      navigate({ to: "/sign-in" as LocalizedTo });
                     },
                   },
                 });

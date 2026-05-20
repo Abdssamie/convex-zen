@@ -13,12 +13,11 @@ import {
   Building2,
   type LucideIcon,
 } from "lucide-react";
-import { api } from "@convex-zen/backend/convex/_generated/api";
-import { useQuery } from "convex/react";
 import { OrganizationSwitcher } from "@/components/organization-switcher";
 import { useIntlayer } from "react-intlayer";
 import { type To } from "@/components/localized-link";
 
+import { authClient } from "@/lib/auth-client";
 import { NavMain } from "@/components/nav-main";
 import { NavUser } from "@/components/nav-user";
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader } from "@/components/ui/sidebar";
@@ -36,7 +35,7 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
-  const user = useQuery(api.auth.getCurrentUser);
+  const session = authClient.useSession();
   const content = useIntlayer("app-sidebar");
 
   type NavItem = {
@@ -73,9 +72,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarFooter>
         <NavUser
           user={{
-            name: user?.name ?? "ConvexZen",
+            name: session.data?.user?.name ?? "ConvexZen",
             email:
-              user?.email ??
+              session.data?.user?.email ??
               ((content.signedIn as unknown as { value: string })?.value || "Signed in"),
             avatar: "",
           }}

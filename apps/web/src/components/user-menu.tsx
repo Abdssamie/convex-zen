@@ -1,4 +1,3 @@
-import { api } from "@convex-zen/backend/convex/_generated/api";
 import { Button } from "@convex-zen/ui/components/button";
 import {
   DropdownMenu,
@@ -9,12 +8,15 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@convex-zen/ui/components/dropdown-menu";
-import { useQuery } from "convex/react";
 
 import { authClient } from "@/lib/auth-client";
+import { useLocalizedNavigate } from "@/hooks/useLocalizedNavigate";
+import type { LocalizedTo } from "@/hooks/useLocalizedNavigate";
 
 export default function UserMenu() {
-  const user = useQuery(api.auth.getCurrentUser);
+  const session = authClient.useSession();
+  const navigate = useLocalizedNavigate();
+  const user = session.data?.user;
 
   return (
     <DropdownMenu>
@@ -30,7 +32,7 @@ export default function UserMenu() {
               authClient.signOut({
                 fetchOptions: {
                   onSuccess: () => {
-                    location.reload();
+                    navigate({ to: "/sign-in" as LocalizedTo });
                   },
                 },
               });

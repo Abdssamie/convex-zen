@@ -1,4 +1,3 @@
-import { api } from "@convex-zen/backend/convex/_generated/api";
 import { Badge } from "@convex-zen/ui/components/badge";
 import { Button } from "@convex-zen/ui/components/button";
 import {
@@ -12,7 +11,6 @@ import { Input } from "@convex-zen/ui/components/input";
 import { Label } from "@convex-zen/ui/components/label";
 import { Textarea } from "@convex-zen/ui/components/textarea";
 import { createFileRoute, redirect } from "@tanstack/react-router";
-import { useQuery } from "convex/react";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 
@@ -44,7 +42,8 @@ function formatDate(value: Date | string) {
 }
 
 function RouteComponent() {
-  const user = useQuery(api.auth.getCurrentUser);
+  const session = authClient.useSession();
+  const currentUserId = session.data?.user?.id;
   const { activeOrganization, organizations, isLoading, error } = useOrganizationState();
 
   const [createName, setCreateName] = useState("");
@@ -436,7 +435,7 @@ function RouteComponent() {
           <CardContent className="grid gap-3">
             {activeOrganization?.members.length ? (
               activeOrganization.members.map((member) => {
-                const isCurrentUser = member.userId === user?._id;
+                const isCurrentUser = member.userId === currentUserId;
 
                 return (
                   <div

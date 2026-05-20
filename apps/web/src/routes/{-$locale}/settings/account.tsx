@@ -1,4 +1,3 @@
-import { api } from "@convex-zen/backend/convex/_generated/api";
 import { Badge } from "@convex-zen/ui/components/badge";
 import {
   Card,
@@ -10,8 +9,8 @@ import {
 import { Button } from "@convex-zen/ui/components/button";
 import { LocalizedLink } from "@/components/localized-link";
 import { createFileRoute, redirect } from "@tanstack/react-router";
-import { useQuery } from "convex/react";
 
+import { authClient } from "@/lib/auth-client";
 import { BaseLayout } from "@/components/layouts/base-layout";
 
 export const Route = createFileRoute("/{-$locale}/settings/account")({
@@ -30,7 +29,8 @@ export const Route = createFileRoute("/{-$locale}/settings/account")({
 });
 
 function RouteComponent() {
-  const user = useQuery(api.auth.getCurrentUser);
+  const session = authClient.useSession();
+  const user = session.data?.user;
 
   return (
     <BaseLayout title="Account" description="Review your Better Auth profile and security status.">
@@ -59,7 +59,7 @@ function RouteComponent() {
             </div>
             <div className="space-y-1">
               <p className="text-sm text-muted-foreground">User ID</p>
-              <p className="font-mono text-sm">{user?._id ?? "Loading..."}</p>
+              <p className="font-mono text-sm">{user?.id ?? "Loading..."}</p>
             </div>
           </CardContent>
         </Card>
